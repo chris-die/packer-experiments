@@ -19,6 +19,7 @@
       "shutdown_command": "echo 'packer' | sudo -S shutdown -P now",
       "headless": true,
       "export_opts": [
+        "--vsys", "0",
         "--version", "{{user `output_box_version`}}"
       ]
     }
@@ -26,7 +27,7 @@
   "provisioners": [
     {
       "type": "chef-solo",
-      "cookbook_paths": ["chef/cookbooks/serato", "chef/vendor"],
+      "cookbook_paths": ["chef/cookbooks/serato", "chef/cookbooks/vendor"],
       "run_list": [
         "recipe[vm_php_web_app_server::default]"
       ]
@@ -36,7 +37,7 @@
     {
       "type": "vagrant",
       "keep_input_artifact": false,
-      "output": "{{user `output_dir`}}/{{user `output_box_name`}}-{{isotime}}.box"
+      "output": "{{user `output_dir`}}/{{user `output_box_name`}}.box"
     }
   ]
 }
