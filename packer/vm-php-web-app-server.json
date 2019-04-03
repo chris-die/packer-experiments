@@ -4,6 +4,7 @@
     "home": "{{env `HOME`}}",
     "output_dir": "output-box",
     "output_box_name": "PHPWebApp",
+    "output_box_version": "0.1.0",
     "source_box_name": "centos-7.5",
     "source_box_repo": "bento",
     "source_box_version": "201808.24.0"
@@ -16,7 +17,10 @@
       "ssh_password": "vagrant",
       "ssh_wait_timeout": "90s",
       "shutdown_command": "echo 'packer' | sudo -S shutdown -P now",
-      "headless": true
+      "headless": true,
+      "export_opts": [
+        "--version", "{{user `output_box_version`}}"
+      ]
     }
   ],
   "provisioners": [

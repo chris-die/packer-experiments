@@ -1,4 +1,4 @@
-name 'vm_php_web_app_server'
+name 'install_php'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
@@ -7,7 +7,7 @@ long_description 'Installs/Configures php_web_app_server'
 version '0.1.0'
 chef_version '>= 12.14' if respond_to?(:chef_version)
 
-depends 'install_php'
+depends 'php', '~> 6.1.1'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when

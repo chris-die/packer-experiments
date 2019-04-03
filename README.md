@@ -11,8 +11,8 @@
 
 - Download Vagrant box and capture name, version etc
 - Vendor berkshelf dependencies
-    berks vendor ./chef/cookbooks --berksfile ./chef/cookbooks/vm_php_web_app_server/Berksfile
-
+    berks vendor ./chef/cookbooks --berksfile ./chef/cookbooks/vm_php_web_app_server/Berksfile --delete
+- Need to re-vendor when editing local non-vm cookbooks (= bummer)
 
 ## Links
 
