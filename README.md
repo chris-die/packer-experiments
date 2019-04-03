@@ -5,14 +5,20 @@
 - Packer
 - Vagrant >= 2.0.2
 - Virtualbox (needs version requirements)
-- Chef and Berkshelf (needs version requirements)
+- Chef and Berkshelf (needs version requirements, gem file, install from gem file)
 
 ## Notes
 
-- Need to install Vagrant box and capture name, version etc
+- Download Vagrant box and capture name, version etc
+- Vendor berkshelf dependencies
+    berks vendor ./chef/cookbooks --berksfile ./chef/cookbooks/php_web_app_server/Berksfile
 
 
 ## Links
+
+https://www.packer.io/docs/index.html
+https://www.vagrantup.com/docs/index.html
+
 
 Notes on Vagrant/Chef/Berkshelf setup
 http://confluence.akld.serato.net:8090/display/DEV/Creating+a+Web+Team+Vagrant-based+development+environment+for+Mac+OS+X

@@ -1,29 +1,38 @@
 {
-    "description": "PHP runtime including language extensions, php-fpm, nginx",
-    "variables": {
-        "home": "{{env `HOME`}}",
-        "output_dir": "output-box",
-        "output_box_name": "PHPWebApp",
-        "source_box_name": "centos-7.5",
-        "source_box_repo": "bento",
-        "source_box_version": "201808.24.0"
-    },
-    "builders": [
-        {
-            "type": "virtualbox-ovf",
-            "source_path": "{{user `home`}}/.vagrant.d/boxes/{{user `source_box_repo`}}-VAGRANTSLASH-{{user `source_box_name`}}/{{user `source_box_version`}}/virtualbox/box.ovf",
-            "ssh_username": "vagrant",
-            "ssh_password": "vagrant",
-            "ssh_wait_timeout": "90s",
-            "shutdown_command": "echo 'packer' | sudo -S shutdown -P now",
-            "headless": true
-        }
-    ],
-    "post-processors": [
-        {
-            "type": "vagrant",
-            "keep_input_artifact": false,
-            "output": "{{user `output_dir`}}/{{user `output_box_name`}}-{{isotime}}.box"
-        }
-    ]
+  "description": "PHP runtime including language extensions, php-fpm, nginx",
+  "variables": {
+    "home": "{{env `HOME`}}",
+    "output_dir": "output-box",
+    "output_box_name": "PHPWebApp",
+    "source_box_name": "centos-7.5",
+    "source_box_repo": "bento",
+    "source_box_version": "201808.24.0"
+  },
+  "builders": [
+    {
+      "type": "virtualbox-ovf",
+      "source_path": "{{user `home`}}/.vagrant.d/boxes/{{user `source_box_repo`}}-VAGRANTSLASH-{{user `source_box_name`}}/{{user `source_box_version`}}/virtualbox/box.ovf",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_wait_timeout": "90s",
+      "shutdown_command": "echo 'packer' | sudo -S shutdown -P now",
+      "headless": true
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "chef-solo",
+      "cookbook_paths": ["chef/cookbooks", "chef/vendor"],
+      "run_list": [
+        "recipe[php_web_app_server::default]"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "keep_input_artifact": false,
+      "output": "{{user `output_dir`}}/{{user `output_box_name`}}-{{isotime}}.box"
+    }
+  ]
 }
