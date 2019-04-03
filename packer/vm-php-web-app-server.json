@@ -24,7 +24,7 @@
       "type": "chef-solo",
       "cookbook_paths": ["chef/cookbooks", "chef/vendor"],
       "run_list": [
-        "recipe[php_web_app_server::default]"
+        "recipe[vm_php_web_app_server::default]"
       ]
     }
   ],
