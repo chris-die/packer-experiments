@@ -184,8 +184,8 @@ default['php']['packages'] = []
 # # AWS config details (for dev environment only)
 # # -----------------------------------------------------------------------------------
 # # Access key and secret for IAM user io.serato.dev
-# default['serato']['aws-dev-config']['access-key'] = 'AKIAJQZK3CYIPJ45JQRQ'
-# default['serato']['aws-dev-config']['secret-key'] = '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'
+# default['serato']['aws-dev-config']['access-key'] = ''
+# default['serato']['aws-dev-config']['secret-key'] = ''
 # default['serato']['aws-dev-config']['region'] = 'us-east-1'
 
 # # -----------------------------------------------------------------------------------

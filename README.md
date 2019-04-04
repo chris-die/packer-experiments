@@ -20,6 +20,9 @@
     - Why does it work in other Cookbook???
     - Or: refactor Serato Websites so that we don't need it
 
+## Todos
+- Merge IAM user perms for com.serato.dev into io.serato.dev users, and just use io.serato.dev via perms file on dev boxes
+
 ## Links
 
 https://www.packer.io/docs/index.html
