@@ -37,7 +37,8 @@
     {
       "type": "vagrant",
       "keep_input_artifact": false,
-      "output": "{{user `output_dir`}}/{{user `output_box_name`}}.box"
+      "output": "{{user `output_dir`}}/{{user `output_box_name`}}.box",
+      "only": ["virtualbox-ovf"]
     }
   ]
 }
