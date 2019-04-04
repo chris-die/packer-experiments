@@ -14,8 +14,8 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
 
   config.vm.define "php_web_app" do |php_web_app|
-    php_web_app.vm.box = "serato-VAGRANTSLASH-php_web_app"
-    php_web_app.vm.box_url = "file://./output-box/PHPWebApp-2019-04-03T09:12:03Z.box"
+    php_web_app.vm.box = "serato-VAGRANTSLASH-vm_php_web_app"
+    php_web_app.vm.box_url = "file://./output-box/PHPWebApp.box"
   end
 
   # Disable automatic box update checking. If you disable this, then

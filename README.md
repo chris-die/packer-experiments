@@ -14,6 +14,12 @@
     berks vendor ./chef/cookbooks/vendor --berksfile ./chef/cookbooks/serato/vm_php_web_app_server/Berksfile --delete
 - Need to re-vendor when editing local non-vm cookbooks (= bummer)
 
+## Problems
+
+- Can't install 'php71-php-mcrypt' for some reason
+    - Why does it work in other Cookbook???
+    - Or: refactor Serato Websites so that we don't need it
+
 ## Links
 
 https://www.packer.io/docs/index.html

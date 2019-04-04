@@ -4,3 +4,4 @@ source 'https://supermarket.chef.io'
 metadata
 
 cookbook 'install_php', path: './../install_php'
+cookbook 'utils', path: './../utils'
