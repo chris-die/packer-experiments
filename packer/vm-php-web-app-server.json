@@ -28,9 +28,9 @@
     {
       "type": "chef-solo",
       "cookbook_paths": ["chef/cookbooks/serato", "chef/cookbooks/vendor"],
-      "run_list": [
-        "recipe[vm_php_web_app_server::default]"
-      ]
+      "run_list": ["recipe[vm_php_web_app_server::default]"],
+      "data_bags_path": "chef/data_bags",
+      "encrypted_data_bag_secret_path": ""
     }
   ],
   "post-processors": [

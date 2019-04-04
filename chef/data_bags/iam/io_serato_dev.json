@@ -1,0 +1,17 @@
+{
+  "id": "io_serato_dev",
+  "access_key": {
+    "encrypted_data": "02xB3u6MAxK+Ec4VsLpsaIWeFVvUmma4Pj30j1Fjja6ZaNyrZ0eK\n",
+    "iv": "5a9OqsER7fOoNBqi\n",
+    "auth_tag": "t85uXySZy4eWorWlaYFeEg==\n",
+    "version": 3,
+    "cipher": "aes-256-gcm"
+  },
+  "secret_key": {
+    "encrypted_data": "DghpkZ9VytQ2sRHMvnUEq2k9+NQd3wAzAkoFb+iy8xR1bUGbLt922NpLRn2H\nCBA05vyDY5ccQ3U1qeY=\n",
+    "iv": "VZeWG/lJqsW6fS6w\n",
+    "auth_tag": "su/0NyIS8KB7dwGK3AaVCA==\n",
+    "version": 3,
+    "cipher": "aes-256-gcm"
+  }
+}

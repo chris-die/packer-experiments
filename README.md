@@ -25,10 +25,6 @@
 
 ## Links
 
-https://www.packer.io/docs/index.html
-https://www.vagrantup.com/docs/index.html
-
-
 Notes on Vagrant/Chef/Berkshelf setup
 http://confluence.akld.serato.net:8090/display/DEV/Creating+a+Web+Team+Vagrant-based+development+environment+for+Mac+OS+X
 

@@ -10,3 +10,6 @@ else
   default['serato']['utils']['remi']['url'] = "http://rpms.famillecollet.com/enterprise/7/remi/$basearch/"
   default['serato']['utils']['remi']['mirrorlist'] = "http://rpms.famillecollet.com/enterprise/7/remi/mirror"
 end
+
+# Default AWS region
+default['serato']['utils']['aws-region'] = 'us-east-1'

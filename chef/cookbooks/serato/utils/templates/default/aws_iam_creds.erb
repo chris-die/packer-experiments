@@ -1,0 +1,4 @@
+[default]
+aws_access_key_id = <%= node['iam_creds']['access_key'] %>
+aws_secret_access_key = <%= node['iam_creds']['secret_key'] %>
+region = <%= node['serato']['utils']['aws-region'] %>
