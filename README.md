@@ -20,6 +20,17 @@
     - Why does it work in other Cookbook???
     - Or: refactor Serato Websites so that we don't need it
 
+## VMs to build
+
+- Web/App
+- Web/App admin
+    - PHPMyAdmin
+    - Sphinx
+- DB/Memcached
+- CLI
+    - Supervisord
+
+
 ## Todos
 - Merge IAM user perms for com.serato.dev into io.serato.dev users, and just use io.serato.dev via perms file on dev boxes
 

@@ -2,9 +2,9 @@ include_recipe 'utils::create_web_app_user'
 
 case node['serato']['php']['major_version']
 when '7.2'
-  include_recipe 'install_php::install_72'
+  include_recipe 'install_php::install_php72'
 else
-  include_recipe 'install_php::install_71'
+  include_recipe 'install_php::install_php71'
 end
 
 include_recipe 'php::default'
