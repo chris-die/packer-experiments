@@ -2,3 +2,4 @@ output-box
 packer_cache
 chef/cookbooks/vendor
 Berksfile.lock
+.vagrant

@@ -1,11 +1,20 @@
 # Default PHP version
 default['serato']['php']['major_version'] = '7.1'
+
 # Path for file-based session storage
 default['serato']['php']['session_save_path'] = "/var/lib/php/session"
 
 # List of packages (installed by `php` Cookbook)
 default['php']['packages'] = []
 
+# PHP-FPM configuration
+if node['platform'] == 'centos'
+    default['serato']['php']['php_fpm_71_service_name'] = 'php71-php-fpm'
+    default['serato']['php']['php_fpm_72_service_name'] = 'php72-php-fpm'
+else
+    default['serato']['php']['php_fpm_71_service_name'] = 'php-fpm-7.1'
+    default['serato']['php']['php_fpm_72_service_name'] = 'php-fpm-7.2'
+end
 
 # # Defaults for the parameterized parts of the php.ini file
 # default['serato']['php']['ini']['html-errors'] = "Off"
